@@ -1,0 +1,91 @@
+* {
+    border: none;
+    border-radius: 0;
+    font-family: Iosevka Nerd Font;
+    font-size: 12px;
+    min-height: 0;
+}
+
+window#waybar {
+    background: transparent;
+    color: white;
+}
+
+tooltip {
+	background: #2a2e38;
+	border-radius: 15px;
+	border-width: 2px;
+	border-style: solid;
+	border-color: #2a2e38;
+	}
+
+#workspaces button {
+    padding: 5px 10px;
+    color: #bbc2cf;
+}
+
+#workspaces button.focused {
+    color: #2a2e38;
+    background-color: #51afef;
+    border-radius: 15px;
+}
+
+#workspaces button.urgent {
+    color: #2a2e38;
+    background-color: #7bc275;
+    border-radius: 15px;
+}
+
+#workspaces button:hover {
+	background-color: #5cEfFF;
+	color: #2a2e38;
+	border-radius: 15px;
+}
+
+#clock, #battery, #pulseaudio, #network, #workspaces {
+	background-color: #2a2e38;
+	padding: 5px 5px;
+	margin: 5px 0px;
+}
+
+#workspaces {
+	margin-left: 10px;
+	background-color: #2a2e38;
+	border-radius: 15px 15px 15px 15px;
+}
+
+#clock {
+    color: #bbc2cf;
+    border-radius: 0px 15px 15px 0px;
+    margin-right: 10px;
+  }
+
+#battery {
+    color: #7bc275;
+    border-radius: 0px 0px 0px 0px;
+}
+
+#battery.charging {
+    color: #7bc275;
+}
+
+#battery.warning:not(.charging) {
+    background-color: #FCCE7B;
+    color: #2a2e38;
+}
+
+#network {
+	color: #C57BDB;
+	border-radius: 15px 0px 0px 15px;
+        margin: 5px 0px;
+}
+
+#pulseaudio {
+	color: #C57BDB;
+}
+
+#tray {
+	background-color: #2a2e38;
+	margin-right: 15px;
+	border-radius: 15px 15px 15px 15px;
+}
