@@ -5,11 +5,11 @@ env:
   TERM: xterm-256color
 
 window:
-   padding:
+  padding:
     x: 30
     y: 30
 
-   decorations: None
+  decorations: None
 
 font:
   normal:
@@ -25,38 +25,37 @@ font:
   italic:
     family: Iosevka Nerd Font
     style: Italic
-
   # Font size
   # size: 11.0
-
 mouse:
   hide_when_typing: true
 
 # Colors (Doom-Vibrant)
 colors:
-   # Default colors
-   primary:
-     background: '#242730'
-     foreground: '#bbc2cf'
+  # Default colors
+  primary:
+    background: '#2E3440'
+    foreground: '#D8DEE9'
 
-   # Normal colors
-   normal:
-     black:   '#2a2e38'
-     red:     '#ff665c'
-     green:   '#7bc275'
-     yellow:  '#FCCE7B'
-     blue:    '#5cEfFF'
-     magenta: '#C57BDB'
-     cyan:    '#51afef'
-     white:   '#bbc2cf'
+  # Normal colors
+  normal:
+    black: '#3B4252'
+    red: '#BF616A'
+    green: '#A3BE8C'
+    yellow: '#EBCB8B'
+    blue: '#81A1C1'
+    magenta: '#B48EAD'
+    cyan: '#88C0D0'
+    white: '#E5E9F0'
 
-   # Bright colors
-   bright:
-     black:   '#484854'
-     red:     '#ff665c'
-     green:   '#7bc275'
-     yellow:  '#fcce7b'
-     blue:    '#5cefff'
-     magenta: '#c57bdb'
-     cyan:    '#51afef'
-     white:   '#bbc2cf'
+  # Bright colors
+  bright:
+    black: '#4C566A'
+    red: '#BF616A'
+    green: '#A3BE8C'
+    yellow: '#EBCB8B'
+    blue: '#81A1C1'
+    magenta: '#B48EAD'
+    cyan: '#8FBCBB'
+    white: '#ECEFF4'
+theme: Nord

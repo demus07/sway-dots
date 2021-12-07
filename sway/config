@@ -1,5 +1,3 @@
-# Read `man 5 sway` for a complete reference.
-
 # Logo key. Use Mod1 for Alt.
 set $mod Mod4
 
@@ -16,25 +14,30 @@ set $term alacritty
 set $browser Brave
 
 # Your preferred application launcher
-# Note: pass the final command to swaymsg so that the resulting window can be opened
-# on the original workspace that the command was run on.
 set $menu dmenu_path | dmenu | xargs swaymsg exec --
 
 ### Output configuration
 
-# wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-#output * bg /home/demus/Wallpaper/003.png fill
-output * bg /home/demus/Wallpaper/005.png fill
-#output * bg /home/demus/Wallpaper/006.png fill
-#lock screen
-bindsym $mod+p exec swaylock
+# wallpaper 
+#output * bg /home/demus/Wallpaper/002.png fill
+#output * bg /home/demus/Wallpaper/001.png fill
+output * bg /home/demus/Wallpaper/003.png fill
+#output * bg /home/demus/Wallpaper/004.png fill
+#output * bg /home/demus/Wallpaper/005.png fill
 
- 
+# This is for use with sway-borders
+border_images.focused ~/.config/sway/borders/rshadows.png
+border_images.focused_inactive ~/.config/sway/borders/rshadows.png
+border_images.unfocused ~/.config/sway/borders/rshadows.png
+border_images.urgent ~/.config/sway/borders/rshadows.png
+
+#lock screen
+bindsym $mod+p exec swaylock -c2a2e38
+
 # Touchpad (tap to enable configured)
- input 2:7:SynPS/2_Synaptics_TouchPad tap enabled
+input 2:7:SynPS/2_Synaptics_TouchPad tap enabled
    
 ### Key bindings
-# Basics:
     # Start a terminal
     bindsym $mod+Return exec $term
 
@@ -43,7 +46,7 @@ bindsym $mod+p exec swaylock
 
     # Start your launcher
     bindsym $mod+d exec $menu
-    bindsym $mod+Shift+d exec wofi
+    bindsym $mod+Shift+d exec wofi --show drun
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
     # Despite the name, also works for non-floating windows.
@@ -206,21 +209,15 @@ for_window [title="^.*"] title_format " "
 default_floating_border normal 0
 
 #gaps
-gaps inner 25
+gaps inner 45
 gaps horizontal 0 
 gaps vertical 0
 
  # take a screenshot (selection)
-   bindsym $mod+Shift+o exec grim -g ~/screenshots/$(date +%Y-%m-%d_%H-%m-%s).png
+   bindsym $mod+Shift+o exec grim -g "$(sway)" ~/screenshots/$(date +%Y-%m-%d_%H-%m-%s).png
 
  # take a screenshot (entire)
     bindsym $mod+Print exec grim -t png ~/screenshots/$(date +%Y-%m-%d_%H-%m-%s).png
-
-# This is for use with sway-borders
-border_images.focused ~/.config/sway/borders/shadows.png
-border_images.focused_inactive ~/.config/sway/borders/shadows.png
-border_images.unfocused ~/.config/sway/borders/shadows.png
-border_images.urgent ~/.config/sway/borders/shadows.png
 
 #Assigning stuff to Workspaces
 for_window [class="alacritty"] move to workspace 1
