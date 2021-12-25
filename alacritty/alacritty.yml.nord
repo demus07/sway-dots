@@ -1,0 +1,60 @@
+
+# Setup term for programs to be able to use it
+env:
+  TERM: xterm-256color
+
+window:
+  padding:
+    x: 10
+    y: 10
+
+  decorations: None
+
+font:
+  normal:
+    family: Ubuntu Mono Nerd Font
+    style: Light
+
+  # Bold font face
+  bold:
+    family: Ubuntu Mono Nerd Font
+    style: Bold
+
+  # Italic font face
+  italic:
+    family: Ubuntu Mono Nerd Font
+    style: Italic
+  # Font size
+  #size: 11.0
+mouse:
+  hide_when_typing: true
+
+# Colors (Doom-Vibrant)
+colors:
+  # Default colors
+  primary:
+    background: '#2E3440'
+    foreground: '#D8DEE9'
+
+  # Normal colors
+  normal:
+    black: '#3B4252'
+    red: '#BF616A'
+    green: '#A3BE8C'
+    yellow: '#EBCB8B'
+    blue: '#81A1C1'
+    magenta: '#B48EAD'
+    cyan: '#88C0D0'
+    white: '#E5E9F0'
+
+  # Bright colors
+  bright:
+    black: '#4C566A'
+    red: '#BF616A'
+    green: '#A3BE8C'
+    yellow: '#EBCB8B'
+    blue: '#81A1C1'
+    magenta: '#B48EAD'
+    cyan: '#8FBCBB'
+    white: '#ECEFF4'
+theme: Nord

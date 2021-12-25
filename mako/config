@@ -1,0 +1,13 @@
+font= Mononoki Nerd Font
+background-color=#1a1b26
+progress-color=#bbc2cf
+width= 250
+height=120
+icons=1
+padding=20
+border-color=#1a1b26
+border-size=3
+border-radius=3
+default-timeout=33333
+layer=overlay
+

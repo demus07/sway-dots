@@ -1,0 +1,67 @@
+# Configuration for Alacritty, the GPU enhanced terminal emulator.
+
+# Setup term for programs to be able to use it
+env:
+  TERM: xterm-256color
+
+window:
+  padding:
+    x: 15
+    y: 15
+
+  decorations: None
+
+font:
+  normal:
+    family: Liga SF Mono Nerd Font
+    style: Light
+
+  # Bold font face
+  bold:
+    family: Liga SF Mono Nerd Font
+    style: Bold
+
+  # Italic font face
+  italic:
+    family: Liga SF Mono Nerd Font
+    style: Italic
+  # Font size
+  # size: 10.0
+mouse:
+  hide_when_typing: true
+
+# Colors (Doom-Vibrant)
+colors:
+  name: TokyoNight Night
+  author: Folke
+  # Default colors
+  primary:
+    background: '0x1a1b26'
+    foreground: '0xc0caf5'
+
+  # Normal colors
+  normal:
+    black: '0x15161E'
+    red: '0xf7768e'
+    green: '0x9ece6a'
+    yellow: '0xe0af68'
+    blue: '0x7aa2f7'
+    magenta: '0xbb9af7'
+    cyan: '0x7dcfff'
+    white: '0xa9b1d6'
+
+  # Bright colors
+  bright:
+    black: '0x414868'
+    red: '0xf7768e'
+    green: '0x9ece6a'
+    yellow: '0xe0af68'
+    blue: '0x7aa2f7'
+    magenta: '0xbb9af7'
+    cyan: '0x7dcfff'
+    white: '0xc0caf5'
+
+  indexed_colors:
+    - { index: 16, color: '0xff9e64' }
+    - { index: 17, color: '0xdb4b4b' }
+theme: Tokyonight_Night
