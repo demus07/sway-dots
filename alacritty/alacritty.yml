@@ -13,17 +13,17 @@ window:
 
 font:
   normal:
-    family: Liga SF Mono Nerd Font
+    family: JetBrains Mono Nerd Font
     style: Light
 
   # Bold font face
   bold:
-    family: Liga SF Mono Nerd Font
+    family: JetBrains Mono Nerd Font
     style: Bold
 
   # Italic font face
   italic:
-    family: Liga SF Mono Nerd Font
+    family: JetBrains Mono Nerd Font
     style: Italic
   # Font size
   # size: 10.0
