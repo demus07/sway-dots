@@ -7,70 +7,40 @@ require('packer').startup(function()
   use 'wbthomason/packer.nvim'
   use 'kyazdani42/nvim-web-devicons'
   use 'akinsho/bufferline.nvim'
-  use 'navarasu/onedark.nvim'
-  use 'lukas-reineke/indent-blankline.nvim'
   use 'kyazdani42/nvim-tree.lua'
-  use 'nvim-treesitter/nvim-treesitter'
-  use 'nvim-lualine/lualine.nvim'
   use 'andweeb/presence.nvim'
+  use 'arcticicestudio/nord-vim'
+  use 'lukas-reineke/indent-blankline.nvim'
+  use 'nvim-treesitter/nvim-treesitter'
 
 end)
 
-vim.cmd[[colorscheme onedark]]
+vim.cmd[[colorscheme nord]]
 
+vim.opt.list = true
+require("indent_blankline").setup {
+    show_end_of_line = true,
+}
 
 vim.opt.termguicolors = true
 require("bufferline").setup{}
 
 vim.opt.list = true
 
-require("indent_blankline").setup {
-    show_end_of_line = true,
-}
-
-
 require'nvim-tree'.setup {
   open_on_setup   = true,
 }
 
 require'nvim-treesitter.configs'.setup {
+  ensure_installed = "maintained",
+  sync_install = false,
+
   highlight = {
     enable = true,
-    custom_captures = {
-      ["foo.bar"] = "Identifier",
-    },
+    additional_vim_regex_highlighting = false,
   },
 }
 
-require('lualine').setup({
-  options = {
-    theme = onedark,
-    component_separators = '|',
-    section_separators = { left = '', right = '' },
-  },
-  sections = {
-    lualine_a = {
-      { 'mode', separator = { left = '' }, right_padding = 2 },
-    },
-    lualine_b = { 'filename' },
-    lualine_c = {},
-    lualine_x = {},
-    lualine_y = { 'filetype' },
-    lualine_z = {
-      { 'location', separator = { right = '' }, left_padding = 2 },
-    },
-  },
-  inactive_sections = {
-    lualine_a = { 'filename' },
-    lualine_b = {},
-    lualine_c = {},
-    lualine_x = {},
-    lualine_y = {},
-    lualine_z = { 'location' },
-  },
-  tabline = {},
-  extensions = {},
-})
 
 require("presence"):setup({
     -- General options
@@ -90,6 +60,6 @@ require("presence"):setup({
     git_commit_text     = "Committing changes",       -- Format string rendered when committing changes in git (either string or function(filename: string): string)
     plugin_manager_text = "Managing plugins",         -- Format string rendered when managing plugins (either string or function(plugin_manager_name: string): string)
     reading_text        = "Reading %s",               -- Format string rendered when a read-only or unmodifiable file is loaded in the buffer (either string or function(filename: string): string)
-    workspace_text      = "Working on %s",            -- Format string rendered when in a git repository (either string or function(project_name: string|nil, filename: string): string)
-    line_number_text    = "Line %s out of %s",        -- Format string rendered when `enable_line_number` is set to true (either string or function(line_number: number, line_count: number): string)
-})
+      workspace_text      = "Working on %s",            -- Format string rendered when in a git repository (either string or function(project_name: string|nil, filename: string): string)
+        line_number_text    = "Line %s out of %s",        -- Format string rendered when `enable_line_number` is set to true (either string or function(line_number: number, line_count: number): string)
+      })

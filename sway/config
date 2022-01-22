@@ -8,7 +8,7 @@ set $up k
 set $right l
 
 # Your preferred terminal emulator
-set $term alacritty
+set $term kitty
 
 # Your preferred web browser 
 set $browser Brave
@@ -19,17 +19,15 @@ set $menu dmenu_path | dmenu | xargs swaymsg exec --
 ### Output configuration
 
 # wallpaper 
-#output * bg /home/demus/Wallpaper/002.png fill
 #output * bg /home/demus/Wallpaper/001.png fill
-#output * bg /home/demus/Wallpaper/003.png fill
-#output * bg /home/demus/Wallpaper/004.png fill
-output * bg /home/demus/Wallpaper/007.png fill
+output * bg /home/demus/Wallpaper/004.png fill
+#output * bg /home/demus/Wallpaper/002.png fill
 
 # This is for use with sway-borders
-border_images.focused ~/.config/sway/borders/dshadows.png
-border_images.focused_inactive ~/.config/sway/borders/dshadows.png
-border_images.unfocused ~/.config/sway/borders/dshadows.png
-border_images.urgent ~/.config/sway/borders/dshadows.png
+border_images.focused ~/.config/sway/borders/shadows.png
+border_images.focused_inactive ~/.config/sway/borders/shadows.png
+border_images.unfocused ~/.config/sway/borders/shadows.png
+border_images.urgent ~/.config/sway/borders/shadows.png
 
 #lock screen
 bindsym $mod+p exec swaylock --screenshots --clock --indicator-idle-visible \
@@ -211,7 +209,7 @@ for_window [title="^.*"] title_format " "
 default_floating_border normal 0
 
 #gaps
-gaps inner 45
+gaps inner 15
 gaps horizontal 0 
 gaps vertical 0
 
