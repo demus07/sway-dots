@@ -20,8 +20,8 @@ set $menu dmenu_path | dmenu | xargs swaymsg exec --
 
 # wallpaper 
 #output * bg /home/demus/Wallpaper/001.png fill
-output * bg /home/demus/Wallpaper/004.png fill
-#output * bg /home/demus/Wallpaper/002.png fill
+#output * bg /home/demus/Wallpaper/004.png fit
+output * bg /home/demus/Wallpaper/002.png fill
 
 # This is for use with sway-borders
 border_images.focused ~/.config/sway/borders/shadows.png
@@ -31,22 +31,23 @@ border_images.urgent ~/.config/sway/borders/shadows.png
 
 #lock screen
 bindsym $mod+p exec swaylock --screenshots --clock --indicator-idle-visible \
-	--indicator-radius 100 \
-	--indicator-thickness 7 \
-	--ignore-empty-password \
-	--ring-color 2a2e38 \
-	--key-hl-color 51afef \
-	--text-color bbc2cf \
-	--line-color 2a2e38 \
-	--inside-color 242730 \
-	--separator-color 00000000 \
-	--fade-in 0.1 \
-	--effect-scale 0.5 --effect-blur 7x3 --effect-scale 2 \
-	--effect-vignette 0.5:0.5 \
+        --indicator-radius 100 \
+        --indicator-thickness 7 \
+        --ignore-empty-password \
+        --ring-color 2a2e38 \
+        --key-hl-color 51afef \
+        --text-color bbc2cf \
+        --line-color 2a2e38 \
+        --inside-color 242730 \
+        --separator-color 00000000 \
+        --fade-in 0.1 \
+        --effect-scale 0.5 --effect-blur 7x3 --effect-scale 2 \
+        --effect-vignette 0.5:0.5 \
 
+	
 # Touchpad (tap to enable configured)
-input 2:7:SynPS/2_Synaptics_TouchPad tap enabled
-   
+input 1267:12584:ASUE1301:00_04F3:3128_Touchpad tap enabled
+
 ### Key bindings
     # Start a terminal
     bindsym $mod+Return exec $term
